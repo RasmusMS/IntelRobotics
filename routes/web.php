@@ -14,9 +14,25 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('front');  
 });
 
-Route::get('/front', function () {
-    return view('front');  
+Route::get('/katalog', function () {
+    return view('catalog');
+});
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/admin', function() {
+    return view('admin');
+});
+
+Route::get('/om-os', function () {
+    return view('about');
+});
+
+Route::get('/kontakt', function () {
+    return view('contact');
 });
