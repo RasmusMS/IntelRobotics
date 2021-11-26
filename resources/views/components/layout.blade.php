@@ -5,7 +5,7 @@
 
     <body>
         <section class="py-4 px-6">
-            <nav class="flex justify-between items-center pb-3 border-b">
+            <nav class="flex justify-between items-center pb-3 px-8 border-b">
                 <div>
                     <a href="/front">IntelRobotics</a>
                 </div>

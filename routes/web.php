@@ -18,7 +18,10 @@ Route::get('/', function () {
 });
 
 Route::get('/katalog', function () {
-    return view('catalog');
+    $description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor porta neque id mattis. Integer imperdiet faucibus turpis, ac porttitor urna malesuada eget. Aliquam erat volutpat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.';
+    $products = [['image' => 'robotarm-1.jpg', 'name' => 'Robotarm', 'description' => $description], ['image' => 'nao-1.jpg', 'name' => 'Nao', 'description' => $description], ['image' => 'robotdog-1.jpg', 'name' => 'Robot dog', 'description' => $description], ['image' => 'humanoid-1.jpg', 'name' => 'Humanoid', 'description' => $description]];
+    //$products = ['product2' => ['name' => 'Nao', 'description' => $description]];
+    return view('catalog', ['products' => $products]);
 });
 
 Route::get('/login', function () {
@@ -35,4 +38,8 @@ Route::get('/om-os', function () {
 
 Route::get('/kontakt', function () {
     return view('contact');
+});
+
+Route::get('/produkt', function () {
+    return view('product');
 });
